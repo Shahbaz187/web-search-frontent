@@ -13,10 +13,13 @@ const AddUser = () => {
   }
   const submitForm = async(e) => {
     e.preventDefault()
-    await axios.post("http://localhost:3000/api/create" , user).then((res)=>{
-      toast.success("User Add Successfully")
-      navigate("/")
-    }).catch((error)=> console.log(error))
+    await axios
+      .post("https://web-search-backend.vercel.app/create", user)
+      .then((res) => {
+        toast.success("User Add Successfully");
+        navigate("/");
+      })
+      .catch((error) => console.log(error));
   };
   return (
     <div className="addUser">

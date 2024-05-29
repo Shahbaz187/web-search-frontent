@@ -14,16 +14,18 @@ const UpdateUser = () => {
   }
 
   useEffect(() => {
-     axios.get(`http://localhost:3000/api/getone/${id}`).then((res)=>{
-      setUser(res.data)
-    })
+     axios
+       .get(`https://web-search-backend.vercel.app/getone/${id}`)
+       .then((res) => {
+         setUser(res.data);
+       });
   
   }, [])
   
   const submitForm = async(e) => {
         e.preventDefault();
         await axios
-          .put(`http://localhost:3000/api/update/${id}`, user)
+          .put(`https://web-search-backend.vercel.app/update/${id}`, user)
           .then((res) => {
             toast.success("User updated Successfully");
             navigate("/");

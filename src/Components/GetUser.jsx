@@ -12,7 +12,8 @@ const GetUser = () => {
 
   useEffect(() => {
     const fechData = async () => {
-      const url = await axios.get("http://localhost:3000/api/getall");
+      const url = await axios.get("https://web-search-backend.vercel.app/getall"
+      );
       const res = await url.data;
       setUser(res)
       setfilterUser(res)
@@ -22,11 +23,14 @@ const GetUser = () => {
   }, []);
 
   const deleteUser = async(id) =>{
-    await axios.delete(`http://localhost:3000/api/delete/${id}`).then((res)=>{
-      console.log(res);
-      setUser((prevUser) => prevUser.filter((user) => user._id !== id))
-         toast.success("User deleted Successfully");
-    }).catch((error)=> console.log(error));
+    await axios
+      .delete(`https://web-search-backend.vercel.app/delete/${id}`)
+      .then((res) => {
+        console.log(res);
+        setUser((prevUser) => prevUser.filter((user) => user._id !== id));
+        toast.success("User deleted Successfully");
+      })
+      .catch((error) => console.log(error));
   }
 
   const searchUser = (e) => {
