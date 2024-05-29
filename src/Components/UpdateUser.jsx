@@ -53,7 +53,7 @@ const UpdateUser = () => {
         <div className="inputGroup">
           <label htmlFor="password">URL</label>
           <input
-            type="password"
+            type="text"
             onChange={inputHandler}
             value={user.url}
             id="text"

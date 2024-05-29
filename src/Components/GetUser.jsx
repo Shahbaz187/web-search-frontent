@@ -27,8 +27,9 @@ const GetUser = () => {
       .delete(`https://web-search-backend.vercel.app/delete/${id}`)
       .then((res) => {
         console.log(res);
-        setUser((prevUser) => prevUser.filter((user) => user._id !== id));
-        toast.success("User deleted Successfully");
+         setUser((prevUser) => prevUser.filter((user) => user._id !== id));
+         toast.success("User deleted Successfully");
+         location.reload()
       })
       .catch((error) => console.log(error));
   }
