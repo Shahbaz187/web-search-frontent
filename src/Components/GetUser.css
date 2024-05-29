@@ -1,0 +1,72 @@
+.userTable{
+    width: 80%;
+    background-color: white;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.065);
+    border-radius: 5px;
+    margin: 40vh auto;
+    transform: translate(0, -50%);
+    padding: 50px;
+}
+
+.addButton{
+   text-decoration: none;
+   background-color: purple;
+   color: white;
+   font-weight: 500;
+   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.065);
+   border-radius: 5px;
+   padding: 10px;
+}
+
+.userTable table{
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: collapse;
+
+}
+
+.userTable table thead th{
+    background-color: darkblue;
+    color: white;
+    padding: 10px;
+}
+
+.userTable table tbody td{
+    padding: 10px;
+    text-align: center;
+}
+
+.actionButtons button{
+    border: 0;
+    outline: none;
+    background: red;
+    padding: 3px 5px;
+    padding-top: 5px;
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.actionButtons a{
+    font-weight: 500;
+    background: green;
+    padding: 3px 5px;
+    padding-left: 8px;
+    font-size: 23px;
+    color: white;
+    border-radius: 5px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+.top-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.top-container input{
+    width: 300px;
+    font-size: 16px;
+    padding: 7px 13px;
+    outline: none;
+}
